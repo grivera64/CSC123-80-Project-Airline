@@ -106,7 +106,7 @@ public class Flight
 	{
 		
 		//header
-		outputWriter.printf("The boarding order for %s with %d seats and %d seats sold is:\n", 
+		outputWriter.printf("The boarding order for Flight %s with %d seats and %d seats sold is:\n", 
 				this.flightName, this.seats, this.seatsSold);
 		
 		//local variable
