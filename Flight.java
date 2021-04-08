@@ -10,6 +10,8 @@
  * 
 */
 
+/* Imports */
+
 import java.util.Random;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -20,6 +22,7 @@ import java.io.PrintWriter;
 public class Flight
 {
 	
+	//private fields
 	private String flightName;
 	private int seats;
 	private int seatsSold;
@@ -27,6 +30,7 @@ public class Flight
 	private ArrayList<Passenger> passBooked = new ArrayList<Passenger>();
 	private ArrayList<Passenger> boardingQueue = new ArrayList<Passenger>();
 	
+	//constructor
 	public Flight(String flightName, int seed)
 	{
 		
@@ -36,6 +40,7 @@ public class Flight
 		
 	}
 	
+	//set the name of the flight
 	public void setFlightName(String flightName)
 	{
 		
@@ -43,6 +48,7 @@ public class Flight
 		
 	}
 	
+	//set the number of seats randomly
 	public void setSeats()
 	{
 		
@@ -50,6 +56,7 @@ public class Flight
 		
 	}
 	
+	//sell the seats to passengers
 	public void sellSeats()
 	{
 		
@@ -79,6 +86,7 @@ public class Flight
 		
 	}
 	
+	//fill and sort the boarding queue
 	public void lineUpCall()
 	{
 		
@@ -93,27 +101,31 @@ public class Flight
 		
 	}
 	
+	//print the details of the boarding queue
 	public void boarding(PrintWriter outputWriter) throws IOException
 	{
 		
+		//header
 		outputWriter.printf("The boarding order for %s with %d seats and %d seats sold is:\n", 
 				this.flightName, this.seats, this.seatsSold);
 		
+		//local variable
 		int counter = 0;
 		
 		Iterator<Passenger> currPass = this.boardingQueue.iterator();
 			
+		/* Local Variables */
 		Passenger currPassenger;
-		
 		FirstClassPassenger tempFirst;
-		
 		CoachPassenger tempCoach;
 		
+		//iterate through the boarding queue
 		while (currPass.hasNext())	
 		{
 		
 			currPassenger = currPass.next();
 			
+			//print the data of the passenger according to its type
 			if (currPassenger instanceof FirstClassPassenger)
 			{
 				
@@ -131,6 +143,7 @@ public class Flight
 				
 			}
 			
+			//every third passenger go to next row
 			counter++;
 			
 			if (counter % 3 == 0)

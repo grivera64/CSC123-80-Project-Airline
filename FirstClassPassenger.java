@@ -12,8 +12,10 @@
 public class FirstClassPassenger extends Passenger
 {
 	
+	//private field
 	private String freqFlyer;
 	
+	//default constructor
 	public FirstClassPassenger()
 	{
 		
@@ -22,6 +24,7 @@ public class FirstClassPassenger extends Passenger
 		
 	}
 	
+	//sets the Frequency Flyer
 	public void setFreqFlyer()
 	{
 		
@@ -40,6 +43,7 @@ public class FirstClassPassenger extends Passenger
 		
 	}
 	
+	//returns the frequency of flyer
 	public String getFreqFlyer()
 	{
 		
@@ -47,6 +51,7 @@ public class FirstClassPassenger extends Passenger
 		
 	}
 	
+	//returns the data of the First Class Passenger as a String
 	public String toString()
 	{
 		

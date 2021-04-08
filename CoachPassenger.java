@@ -12,8 +12,10 @@
 public class CoachPassenger extends Passenger
 {
 	
+	//private field
 	private String freqFlyer;
 	
+	//default constructor
 	public CoachPassenger()
 	{
 		
@@ -22,6 +24,7 @@ public class CoachPassenger extends Passenger
 		
 	}
 	
+	//sets the frequency of flyer
 	public void setFreqFlyer()
 	{
 		
@@ -40,6 +43,7 @@ public class CoachPassenger extends Passenger
 		
 	}
 	
+	//returns the frequency of the flyer
 	public String getFreqFlyer()
 	{
 		
@@ -47,6 +51,8 @@ public class CoachPassenger extends Passenger
 		
 	}
 	
+	//@Override
+	//returns the data for the Coach
 	public String toString()
 	{
 		

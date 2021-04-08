@@ -13,12 +13,15 @@
 public abstract class Passenger implements Comparable<Passenger>
 {
 	
+	//private fields
 	private String passengerID;
 	private String ticketClass;
 	private int ticketNumber;
 	
+	//public global field
 	public static int ticketCounter = 0;
 	
+	//constructor
 	public Passenger(String ticketClass)
 	{
 		
@@ -28,6 +31,7 @@ public abstract class Passenger implements Comparable<Passenger>
 		
 	}
 	
+	//sets the ticket number for use in ID
 	public void setTicketNumber()
 	{
 		
@@ -37,6 +41,7 @@ public abstract class Passenger implements Comparable<Passenger>
 		
 	}
 	
+	//returns the ticket number
 	public int getTicketNumber()
 	{
 		
@@ -44,6 +49,7 @@ public abstract class Passenger implements Comparable<Passenger>
 		
 	}
 	
+	//sets the class of the ticket according to the passenger
 	public void setTicketClass(String tClass)
 	{
 		
@@ -51,6 +57,7 @@ public abstract class Passenger implements Comparable<Passenger>
 		
 	}
 	
+	//gets the ticket class
 	public String getTicketClass()
 	{
 		
@@ -58,6 +65,8 @@ public abstract class Passenger implements Comparable<Passenger>
 		
 	}
 	
+	//creates the PassengerID accordingly
+	//to the ticket number and class
 	public void setPassengerID()
 	{
 		
@@ -65,6 +74,7 @@ public abstract class Passenger implements Comparable<Passenger>
 		
 	}
 	
+	//returns the ID
 	public String getPassengerID()
 	{
 		
@@ -72,6 +82,8 @@ public abstract class Passenger implements Comparable<Passenger>
 		
 	}
 	
+	//@Override
+	//returns the ID as a String
 	public String toString()
 	{
 		
@@ -79,6 +91,8 @@ public abstract class Passenger implements Comparable<Passenger>
 		
 	}
 	
+	//@Override
+	//Comparable allows for use in Collections.sort()
 	public int compareTo(Passenger o)
 	{
 		
@@ -105,6 +119,7 @@ public abstract class Passenger implements Comparable<Passenger>
 		
 	}
 	
+	//abstract methods
 	public abstract void setFreqFlyer();
 	public abstract String getFreqFlyer();
 	
